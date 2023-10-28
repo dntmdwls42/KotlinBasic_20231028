@@ -50,6 +50,12 @@ class MainActivity : AppCompatActivity() {
 
 //            어머니 이름 변경 시도
 //            motherName = "이경주2" //Syntax 에러 -> 상수로 선언한 공간의 값을 변경 시도
+
+//            내 출생년도 val에 저장. (변경 불가) => 변수 생성과 동시에 저장
+            val myBrithYear = 1999 // 자료형이 자동으로 Int로 추론되어 결정됨.
+
+//            코틀린에서는 모든 변수가 전부 .메소드 등 활용 가능(전부 참조형)
+//            myBrithYear.compareTo() => Int도 참조형. 추가 기능 활용 가능
         }
     }
 }
