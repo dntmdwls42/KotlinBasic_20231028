@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 //            EditText는 .toString()으로 String입력값을 받아오는 역할.
 //            Int로 변환 => Casting 필요 => String변수.toInt() 실행
             
-            val userAge = binding.edtUserAge.text.toString()
+            val userAge = binding.edtUserAge.text.toString().toInt()
 
 //            if (userAge >= 20) {
 //                Toast.makeText(this, "성인입니다", Toast.LENGTH_SHORT).show()
@@ -90,6 +90,14 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "30대 입니다.", Toast.LENGTH_SHORT).show()
                 }
             }
+        }
+
+        binding.btnNameToast.setOnClickListener{
+
+//            이름 입력칸에 적힌 이름을 그대로 토스트로 출력 (연습)
+
+//            이름 입력칸에 적힌 이름 + "님 환영합니다." 그대로 토스트로 출력 (응용)
+//            우승진 => "우승진님 환영합니다." 토스트
         }
     }
 }
