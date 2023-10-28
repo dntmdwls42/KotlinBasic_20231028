@@ -7,6 +7,10 @@ android {
     namespace = "kr.ac.wku.kotlinbasic_20231028"
     compileSdk = 34
 
+    dataBinding {
+        enable=true
+    }
+
     defaultConfig {
         applicationId = "kr.ac.wku.kotlinbasic_20231028"
         minSdk = 24
@@ -26,6 +30,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
