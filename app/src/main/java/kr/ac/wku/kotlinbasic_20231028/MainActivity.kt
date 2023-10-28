@@ -57,5 +57,35 @@ class MainActivity : AppCompatActivity() {
 //            코틀린에서는 모든 변수가 전부 .메소드 등 활용 가능(전부 참조형)
 //            myBrithYear.compareTo() => Int도 참조형. 추가 기능 활용 가능
         }
+
+        binding.btnCondition.setOnClickListener{
+
+//            사용자의 나이를 val에 저장
+            val userAge = 25
+
+//            if (userAge >= 20) {
+//                Toast.makeText(this, "성인입니다", Toast.LENGTH_SHORT).show()
+//            }
+//            else if (userAge >= 17) {
+//                Toast.makeText(this, "고등학생입니다", Toast.LENGTH_SHORT).show()
+//            }else{
+//                Toast.makeText(this, "중학생 또는 그 이하 입니다", Toast.LENGTH_SHORT).show()
+//            }
+//
+//            when 활용 예시
+            when (userAge) {
+                25 -> {
+//                    userAge에 25가 들어있을때 실행할 코드
+                    Toast.makeText(this, "25살 입니다.", Toast.LENGTH_SHORT).show()
+                }
+                27,28,29 -> {
+//                    userage의 값이 27,28,29 셋중 하나라면 실행
+                    Toast.makeText(this, "20대 후반입니다.", Toast.LENGTH_SHORT).show()
+                }
+                in 30..39 -> {
+                    Toast.makeText(this, "30대 입니다.", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
     }
 }
